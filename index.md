@@ -247,8 +247,6 @@ https://github.com/ArduCAM/Arduino
 
 # Third Milestone
 
-<iframe width="1038" height="584" src="https://www.youtube.com/embed/J3EQ6ztByLU?list=PLe-u_DjFx7evbB-xhja9iGMLTbCZXLQRI" title="Arjun S. Milestone 3" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
   For my third milestone, I connected the hexapod to my remote and made it control the robot. This step was actually quite simple. All I had to do was upload some code to the remote and it was done! However, a problem I immediately noticed was that all of the cables from the servos were inhibiting the movement of the limbs and in general were an eyesore. I used some sleeve cables to tie them up and keep everything from tangling up.
 
   While testing the hexapod and remote, I actually discovered a new feature! I realized that I could use one of the potentiometers, dials that change resistance based on how much it is turned, could change the height of the hexapod. The way it does this is that it measures the resistance. When the dial is turned, the resistance changes, and it measures that to change the height.
@@ -259,8 +257,6 @@ https://github.com/ArduCAM/Arduino
 
 # Second Milestone
 
-<iframe width="996" height="560" src="https://www.youtube.com/embed/BZb4BqTWyt4?list=PLe-u_DjFx7evbB-xhja9iGMLTbCZXLQRI" title="Arjun S. Milestone 2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
   For my second milestone, I finished my remote. It consists of the battery, joystick, wireless module, potentiometers, power button, power port, and arduino boards. The battery obviously provides power for the whole operation, allowing everything to run smoothly. The joystick is basically user input, measuring what the user, in this case me, wants to do and telling the arduino that. The wireless module is for sending the processed input to the hexapod. It is like a pipe from a chocolate factory to a grocery store or to someone's mouth. The joystick is like the raw cacao beans, and the arduino is like the actual factory that turns the cacao beans into processed chocolate, that is compatible with humans, basically the hexapod. 
   
   Really, assembling the remote was quite easy, but I learned a lot from it, like what a potentiometer is -- basically an adjustable resistor. I took the time to understand how the remote actually works, and I gained much understanding from it. I was able to identify many components on the wireless module, too! There was a crystal oscillator, which keeps time, and LEDs, light-emmitting-diodes.
@@ -268,8 +264,6 @@ https://github.com/ArduCAM/Arduino
   The top part of the remote is actually the "remote shield", and the actual processing area is at the bottom, the actual control board. There are two power ports, one on the remote shield, and one on the control board, but I now know that I should plug in the top one, as it has the power button that will actually affect on and off, instead of doing nothing. The remote shield takes input from the user, via the joystick and potentiometer, sends it to the control board below, which sends a signal, through the remote shield, to the wireless module, and from there to the hexapod.
 
 # First Milestone
-
-<iframe width="996" height="560" src="https://www.youtube.com/embed/BxPI1ASxOl8?list=PLe-u_DjFx7evbB-xhja9iGMLTbCZXLQRI" title="Arjun S. Milestone 1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 The Hexapod hardware consists of six main parts: 
 - The battery
@@ -290,21 +284,11 @@ The Hexapod hardware consists of six main parts:
 
 # Starter Project
 
-<iframe width="996" height="560" src="https://www.youtube.com/embed/ozKAnxqSFMM?list=PLe-u_DjFx7evbB-xhja9iGMLTbCZXLQRI" title="Arjun S. Starter Project" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
   My starter project was the digital clock. It can tell the time, temperature, date, and even wake you up with an alarm! The clock has a lot of intricate components, like the crystal oscilator, which tells time and seconds. The whole setup is controlled by two IC (integrated circuit) devices. They came precoded, but I had to install it all into the main board. There are two buttons on the top that allow the user to change values and view different things.
 
   The alarm music is played through the passive buzzer, which creates the sound. It is basically a speaker. For the alarm itself, you can choose your choice of music, and you can select any time for it to go off. In addition, the crystal oscillator keeps time in perfect sync, and after a few days of use it is still on time.
 
   There are quite a few Metal Film Resistors, of varying resistance, and they keep components from being overloaded or shorting out. In additions, there are multiple capacitors that temporarily store energy to be kept elsewhere. The thermistor, which changes resistance with temperature. The IC measures this change in resistance to determine the temperature. Finally, the diode at D1 only allows for flow of current in one direction, controlling the flow from going where it shouldn't.
-
-
-# Schematics 
-Here's where you'll put images of your schematics. [Tinkercad](https://www.tinkercad.com/blog/official-guide-to-tinkercad-circuits) and [Fritzing](https://fritzing.org/learning/) are both great resoruces to create professional schematic diagrams, though BSE recommends Tinkercad becuase it can be done easily and for free in the browser. 
-
-  Steps to opening arduino libraries folder: Search Arduino in your file hub (finder for mac, windows button for windows). The folder should simply be named Arduino. In the Arduino folder, there should be a folder called libraries. Open that folder. In that folder are all of the files for your libraries. If you want to change them, simply open them and edit them. If you are looking to edit the hexapod code, open the FNHR folder (still in the libraries folder). In that, open the src folder. You can replace the entire src folder with the modified version included, or you can try to edit it on your own!
-
-  If you want to add a library manually, you can simply drag and drop a file into it. For example, if you want to add the included memorysaver.h file(which you will need for the camera code to work), open the libraries folder, and simply drag and drop the Arducam folder included into the library.
   
 # Code
 I put the following code in the FNHR.cpp file in the src file of the library FNHR, used to control the robot. The full customized code I used to upload is included in this branch, but this is most of the basic code that made sure that the robot doesn't just run into a wall:
